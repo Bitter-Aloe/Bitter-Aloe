@@ -76,6 +76,7 @@ public class FlowerPopulater : MonoBehaviour
             DataEntry entry = GlobalVariables.GetTestimonyEntry(i);
             Vector3 pos = new Vector3(entry.x.Remap(min.x, max.x, -50,50), 0, entry.y.Remap(min.y, max.y, -50, 50));
             flowers[i] = (GameObject)Instantiate(flowerPrefab, pos, Quaternion.identity);
+            flowers[i].GetComponent<PopupManager>().dataIndex = i;
 
         }
     }

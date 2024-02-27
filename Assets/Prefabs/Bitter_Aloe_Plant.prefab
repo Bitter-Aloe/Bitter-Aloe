@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5782878460905870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.613, y: -1.151, z: -0.221}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122,14 +122,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2749235829293787193}
-  m_LocalRotation: {x: -0.08482212, y: 0.627457, z: 0.76744103, w: -0.100683466}
-  m_LocalPosition: {x: 1.5965405, y: -1.3764858, z: -0.0371809}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4827393966802074402}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -108.916, y: 127.69, z: 53.613}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3544973216469359523
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4827393966802074402}
   - component: {fileID: 5311302591092203929}
   - component: {fileID: 5311302591092203930}
-  - component: {fileID: 5311302591092203925}
+  - component: {fileID: 2707567461392653273}
   - component: {fileID: 5311302591092203926}
   m_Layer: 6
   m_Name: Bitter_Aloe_Plant
@@ -245,8 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700118f3ef3ca964ea33ade1b9fd7a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupManager: {fileID: 5311302591092203925}
---- !u!114 &5311302591092203925
+  popupManager: {fileID: 2707567461392653273}
+--- !u!114 &2707567461392653273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,11 +255,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5311302591092203928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0e2a66be7ef744788264ce25ee275f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a30dd48f5ca10544bda71c040601305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPanel: {fileID: 0}
-  popupText: {fileID: 0}
+  popupPrefab: {fileID: 4177784398488770994, guid: b646db5f5a44ec040a6a8462b1a93282, type: 3}
 --- !u!114 &5311302591092203926
 MonoBehaviour:
   m_ObjectHideFlags: 0

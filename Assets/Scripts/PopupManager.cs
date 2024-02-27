@@ -4,8 +4,12 @@ using TMPro; // Important for TextMeshPro
 
 public class PopupManager : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject popupPanel;   // The UI panel that contains the popup text
-    public TextMeshProUGUI popupText;  // Reference to your TextMeshPro Text component
+
+    [SerializeField]
+    public GameObject popupPrefab;
+    private GameObject popupInstance;
+
+    public int dataIndex = 0;
 
     private bool isPopupOpen = false;
 
@@ -34,26 +38,30 @@ public class PopupManager : MonoBehaviour, IPointerClickHandler
 
     private void DisplayPopup(string message)
     {
-        if (popupPanel)
+        if (popupPrefab)
         {
-            popupText.text = message;
-            popupPanel.SetActive(true);
+            /*popupText.text = message;
+            popupPanel.SetActive(true);*/
             isPopupOpen = true;
+            popupInstance = Instantiate(popupPrefab, new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), Quaternion.identity);
+            TextMeshPro textMesh = popupInstance.GetComponentInChildren<TextMeshPro>();
+            textMesh.text = message;
         }
     }
 
     private void ClosePopup()
     {
-        if (popupPanel)
+        if (popupPrefab)
         {
-            popupPanel.SetActive(false);
+            /*popupPanel.SetActive(false);*/
             isPopupOpen = false;
+            Destroy(popupInstance);
         }
     }
 
     private string GetCSVData()
     {
-        var firstEntry = GlobalVariables.GetTestimonyEntry(0); // Index should start at 0 to get the first entry
+        var firstEntry = GlobalVariables.GetTestimonyEntry(dataIndex); // Index should start at 0 to get the first entry
         return $"Name: {firstEntry.name}\nDescription: {firstEntry.description}\nCoordinates: ({firstEntry.x}, {firstEntry.y})\nTopic: {firstEntry.topic}";
     }
 }

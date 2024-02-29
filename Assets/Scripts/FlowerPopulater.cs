@@ -17,8 +17,9 @@ public class FlowerPopulater : MonoBehaviour
 {
     private GameObject[] flowers;
     private Vector2 objectPoolPosition = new Vector2(-50f, 50f);
-    public int objectPoolSize = 50;
+    public int objectPoolSize = 1000;
     public GameObject flowerPrefab;
+    public float spawnScale = 200.0f;
 
     Vector2 maxInDataSet(List<DataEntry> dataEntries)
     {
@@ -62,23 +63,27 @@ public class FlowerPopulater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GlobalVariables.GetTestimonyData().Count);
+        Debug.Log("Spawning Plants at t=" + Time.realtimeSinceStartupAsDouble);
+        List<DataEntry> dataset = GlobalVariables.GetTestimonyData();
         flowers = new GameObject[objectPoolSize];
 
-        List<DataEntry> dataset = GlobalVariables.GetTestimonyData();
+    
 
         Vector2 max = maxInDataSet(dataset);
         Vector2 min = minInDataSet(dataset);
 
-        for (int i =0; i < dataset.Count && i < objectPoolSize; i++)
+        Debug.Log("Plant Count = " + objectPoolSize);
+
+        for (int i = 0; i < dataset.Count && i < objectPoolSize; i++)
         {
             //Debug.Log(GlobalVariables.GetTestimonyEntry(i).x);
             DataEntry entry = GlobalVariables.GetTestimonyEntry(i);
-            Vector3 pos = new Vector3(entry.x.Remap(min.x, max.x, -50,50), 0, entry.y.Remap(min.y, max.y, -50, 50));
-            flowers[i] = (GameObject)Instantiate(flowerPrefab, pos, Quaternion.identity);
+            Vector3 pos = new Vector3(entry.x.Remap(min.x, max.x, -spawnScale, spawnScale), 0, entry.y.Remap(min.y, max.y, -spawnScale, spawnScale));
+            flowers[i] = (GameObject)Instantiate(flowerPrefab, pos, Quaternion.AngleAxis(Random.value * 360, Vector3.up));
             flowers[i].GetComponent<PopupManager>().dataIndex = i;
 
         }
+        Debug.Log("Finished Spawning Plants at t=" + Time.realtimeSinceStartupAsDouble);
     }
 
     private void FixedUpdate()

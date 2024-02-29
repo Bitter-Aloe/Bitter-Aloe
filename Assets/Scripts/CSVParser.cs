@@ -23,6 +23,7 @@ public class CSVParser : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("Loading CSV Data... t=" + Time.realtimeSinceStartupAsDouble);
         if (textAssetData != null)
         {
             // Normalize line endings to \n
@@ -56,6 +57,29 @@ public class CSVParser : MonoBehaviour
                         Debug.LogError($"Failed to parse data on line {i + 1}: {lines[i]}");
                     }
                 }
+                else if (values.Count >= 5) // Ensure there are at least 6 fields
+                {
+                    DataEntry data = new DataEntry();
+                    if  (float.TryParse(values[2], NumberStyles.Any, CultureInfo.InvariantCulture, out float x) &&
+                        float.TryParse(values[3], NumberStyles.Any, CultureInfo.InvariantCulture, out float y) &&
+                        int.TryParse(values[4], out int topic))
+                    {
+                        data.id = i;
+                        data.name = values[0];
+                        data.description = values[1];
+                        data.x = x;
+                        data.y = y;
+                        data.topic = topic;
+
+                        dataList.Add(data);
+
+                        //Debug.Log($"ID: {data.id}, Name: {data.name}, Description: {data.description}, X: {data.x}, Y: {data.y}, Topic: {data.topic}");
+                    }
+                    else
+                    {
+                        Debug.LogError($"Failed to parse data on line {i + 1}: {lines[i]}");
+                    }
+                }
                 else
                 {
                     Debug.LogWarning($"Not enough values on line {i + 1}: {lines[i]}");
@@ -66,6 +90,7 @@ public class CSVParser : MonoBehaviour
         {
             Debug.LogError("CSV file not assigned.");
         }
+        Debug.Log("Finished Loading CSV Data... t=" + Time.realtimeSinceStartupAsDouble);
     }
 
     // Parse a CSV line with potential quoted fields

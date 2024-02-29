@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d5ccd2b5fe4e64dafe0d34a21770c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAssetData: {fileID: 4900000, guid: 073e8bd166401074e96c3f8b0e9a5535, type: 3}
+  textAssetData: {fileID: 4900000, guid: 83550e75914e4b9439cf4c38d61a6201, type: 3}
   dataList: []
 --- !u!114 &1805721216
 MonoBehaviour:
@@ -796,8 +796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4462145ff2df1d64fb050c88c733eaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPoolSize: 50
+  objectPoolSize: 1000
   flowerPrefab: {fileID: 5311302591092203928, guid: 29984c330b58d324c84647d405575213, type: 3}
+  spawnScale: 250
 --- !u!1 &2034303854
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 // Remap from one value range to another
@@ -20,6 +22,8 @@ public class FlowerPopulater : MonoBehaviour
     public int objectPoolSize = 1000;
     public GameObject flowerPrefab;
     public float spawnScale = 200.0f;
+
+    private bool shouldDropPlants = true;
 
     Vector2 maxInDataSet(List<DataEntry> dataEntries)
     {
@@ -88,17 +92,51 @@ public class FlowerPopulater : MonoBehaviour
 
     private void FixedUpdate()
     {
-       foreach(GameObject flower in flowers)
-       {
-            Rigidbody body;
-            if ((body = flower.GetComponent<Rigidbody>()) != null) {
-                if(Physics.Raycast(flower.transform.position, flower.transform.TransformDirection(Vector3.down), 0.5f)) {
-                    body.useGravity = false;
-                    body.isKinematic = true;
-                    flower.transform.Translate(new Vector3(0, -0.1f, 0));
+        if(shouldDropPlants)
+        {
+            Vector3[] hitPoints = new Vector3[flowers.Length];
+            List<int> removeIndices = new List<int>();
+            for (int i = 0; i < flowers.Length; i++)
+            {
+                GameObject flower = flowers[i];
+                Rigidbody body;
+                if ((body = flower.GetComponent<Rigidbody>()) != null)
+                {
+                    RaycastHit hit;
+                    if (Physics.Raycast(flower.transform.position, flower.transform.TransformDirection(Vector3.down), out hit, 100.0f))
+                    {
+                        //Debug.Log(hit.point);
+                        hitPoints[i] = hit.point;
+                    }
+                    else // destroy flower and add to list of flowers to delete from array
+                    {
+                        Debug.Log("Could not find ground for plant at " +  flower.transform.position);
+                        removeIndices.Add(i);
+                        Destroy(flower);
+                    }
                 }
             }
-       }
+
+            for(int i = 0; i < flowers.Length; i++)
+            { // transform all plants together
+                if (hitPoints[i] != null)
+                {
+                    flowers[i].transform.position = hitPoints[i];
+                }
+            }
+
+            Debug.Log("Plants to remove count = " + removeIndices.Count);
+            removeIndices.Sort((a, b) => b.CompareTo(a));
+            List<GameObject> temp = new List<GameObject>(flowers);
+            for (int i = 0;i < removeIndices.Count;i++)
+            {
+                temp.RemoveAt(removeIndices[i]);
+            }
+            flowers = temp.ToArray();
+
+            shouldDropPlants = false;
+        }
+      
     }
 
 

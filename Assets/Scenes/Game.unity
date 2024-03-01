@@ -136,8 +136,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112404340605009020, guid: 4e8fcb70717f73643b0b17b98dfcd121, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.7
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3573597715591873048, guid: 4e8fcb70717f73643b0b17b98dfcd121, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50461f37721c3064f9826f3e351bf9d3, type: 2}
     - target: {fileID: 5707983878548765093, guid: 4e8fcb70717f73643b0b17b98dfcd121, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -148,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707983878548765093, guid: 4e8fcb70717f73643b0b17b98dfcd121, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -108
+      value: -57
       objectReference: {fileID: 0}
     - target: {fileID: 5707983878548765093, guid: 4e8fcb70717f73643b0b17b98dfcd121, type: 3}
       propertyPath: m_LocalPosition.z
@@ -808,9 +812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4462145ff2df1d64fb050c88c733eaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPoolSize: 1000
+  objectPoolSize: 10000
   flowerPrefab: {fileID: 5311302591092203928, guid: 29984c330b58d324c84647d405575213, type: 3}
-  spawnScale: 200
+  spawnScale: 1100
 --- !u!1 &2034303854
 GameObject:
   m_ObjectHideFlags: 0

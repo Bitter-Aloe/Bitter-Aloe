@@ -103,7 +103,7 @@ public class FlowerPopulater : MonoBehaviour
                 if ((body = flower.GetComponent<Rigidbody>()) != null)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(flower.transform.position, flower.transform.TransformDirection(Vector3.down), out hit, 100.0f))
+                    if (Physics.Raycast(flower.transform.position, flower.transform.TransformDirection(Vector3.down), out hit, 1000.0f))
                     {
                         //Debug.Log(hit.point);
                         hitPoints[i] = hit.point;

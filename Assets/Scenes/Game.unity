@@ -812,9 +812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4462145ff2df1d64fb050c88c733eaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPoolSize: 10000
-  flowerPrefab: {fileID: 5311302591092203928, guid: 29984c330b58d324c84647d405575213, type: 3}
-  spawnScale: 1100
+  objectPoolSize: 20000
+  flowerPrefab: {fileID: 3905574709322182561, guid: 59a81f13c3b226844ba1c36095444d84, type: 3}
+  spawnScale: 1500
 --- !u!1 &2034303854
 GameObject:
   m_ObjectHideFlags: 0

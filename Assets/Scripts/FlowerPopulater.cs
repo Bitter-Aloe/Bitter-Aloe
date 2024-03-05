@@ -69,7 +69,8 @@ public class FlowerPopulater : MonoBehaviour
     {
         Debug.Log("Spawning Plants at t=" + Time.realtimeSinceStartupAsDouble);
         List<DataEntry> dataset = GlobalVariables.GetTestimonyData();
-        flowers = new GameObject[objectPoolSize];
+        Debug.Log(Mathf.Min(objectPoolSize, dataset.Count));
+        flowers = new GameObject[Mathf.Min(objectPoolSize, dataset.Count)];
 
     
 
@@ -78,7 +79,7 @@ public class FlowerPopulater : MonoBehaviour
 
         Debug.Log("Plant Count = " + objectPoolSize);
 
-        for (int i = 0; i < dataset.Count && i < objectPoolSize; i++)
+        for (int i = 0; i < flowers.Length; i++)
         {
             //Debug.Log(GlobalVariables.GetTestimonyEntry(i).x);
             DataEntry entry = GlobalVariables.GetTestimonyEntry(i);
@@ -94,6 +95,7 @@ public class FlowerPopulater : MonoBehaviour
     {
         if(shouldDropPlants)
         {
+            Debug.Log("Dropping and deleting plants at t="+Time.realtimeSinceStartupAsDouble);
             Vector3[] hitPoints = new Vector3[flowers.Length];
             List<int> removeIndices = new List<int>();
             for (int i = 0; i < flowers.Length; i++)
@@ -110,9 +112,9 @@ public class FlowerPopulater : MonoBehaviour
                     }
                     else // destroy flower and add to list of flowers to delete from array
                     {
-                        Debug.Log("Could not find ground for plant at " +  flower.transform.position);
+                        //Debug.Log("Could not find ground for plant at " +  flower.transform.position);
                         removeIndices.Add(i);
-                        Destroy(flower);
+                        flower.SetActive(false);
                     }
                 }
             }
@@ -124,16 +126,33 @@ public class FlowerPopulater : MonoBehaviour
                     flowers[i].transform.position = hitPoints[i];
                 }
             }
+            Debug.Log("Finished Dropping and deleting plants at t=" + Time.realtimeSinceStartupAsDouble);
+
+            /*Debug.Log(Time.realtimeSinceStartupAsDouble);
 
             Debug.Log("Plants to remove count = " + removeIndices.Count);
             removeIndices.Sort((a, b) => b.CompareTo(a));
-            List<GameObject> temp = new List<GameObject>(flowers);
-            for (int i = 0;i < removeIndices.Count;i++)
+            List<GameObject> temp = new List<GameObject>();
+
+            Debug.Log(Time.realtimeSinceStartupAsDouble);
+
+            int currRemoveIndex = 0;
+            int currRemoveIndexVal = removeIndices[0];
+            for (int i = 0;i < flowers.Length; i++)
             {
-                temp.RemoveAt(removeIndices[i]);
+                if(i != currRemoveIndexVal)
+                {
+                    temp.Add(flowers[i]);
+                }
+                else
+                {
+                    currRemoveIndex++;
+                    currRemoveIndexVal = removeIndices[currRemoveIndex];
+                }
+                
             }
             flowers = temp.ToArray();
-
+            Debug.Log(Time.realtimeSinceStartupAsDouble);*/
             shouldDropPlants = false;
         }
       

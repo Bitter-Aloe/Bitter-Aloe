@@ -25,6 +25,8 @@ public class MouseCamLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Pausing.gameIsPaused) return;
+
         if (Cursor.lockState == CursorLockMode.Locked)
         {
             // md is mosue delta

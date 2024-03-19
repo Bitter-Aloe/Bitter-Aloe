@@ -9,4 +9,9 @@ public class ChangeScene : MonoBehaviour
             Debug.Log("Switching to scene at t=" + Time.realtimeSinceStartupAsDouble);
             SceneManager.LoadScene(SceneID);
        }
+
+       public void QuitGame(){
+          Application.Quit();
+          Debug.Log("Application Quit");
+       }
 }

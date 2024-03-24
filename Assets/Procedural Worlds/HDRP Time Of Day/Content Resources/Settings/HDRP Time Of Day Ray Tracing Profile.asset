@@ -1,0 +1,324 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2614188a01c744b9042c6dbc571c90, type: 3}
+  m_Name: HDRP Time Of Day Ray Tracing Profile
+  m_EditorClassIdentifier: 
+  m_rayTracingSettings:
+    m_rayTraceSettings: 1
+    m_renderInEditMode: 1
+    m_rayTraceSSGI: 1
+    m_ssgiQuality: 2
+    m_ssgiAmbientAmount: 0.75
+    m_rayTraceSSR: 1
+    m_ssrQuality: 2
+    m_ssrAmbientAmount: 0.75
+    m_rayTraceAmbientOcclusion: 1
+    m_aoQuality: 2
+    m_recursiveRendering: 0
+    m_recursiveRenderingQuality: 2
+    m_rayTraceSubSurfaceScattering: 1
+    m_sssQuality: 0
+    m_overrideQuality: 0
+    m_rayTraceShadows: 1
+    m_rayTraceContactShadows: 0
+    m_colorShadows: 1
+    m_denoiseShadows: 1
+    m_shadowsQuality: 2
+    m_overrideQualityValue: 2
+    RTGlobalQualitySettings:
+      CurrentQuality: 0
+      UseRTAdditionalLightOptimization: 1
+      SortClosesLightSources: 1
+      MaxRTAdditionalLightSources: 512
+      MaxRenderDistanceCheck: 400
+      RTSceneCheck: 1
+      SceneNames:
+      - PW_LP_sampleScene
+      - Grey Block Prefab Scenes
+      - Peter Framework
+      - Real World Terrain
+      - OutdoorsScene
+      - ABC Building Only
+      RTSSGIQuality:
+      - m_qualityName: Low
+        m_tracingMode: 4
+        m_textureLODBias: 7
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_probeDimmer: 1
+        m_maxRayLength: 25
+        m_clampValue: 10
+        m_fullResolution: 0
+        m_maxRaySteps: 32
+        m_denoise: 1
+        m_halfResDenoise: 1
+        m_denoiseRadius: 1
+        m_secondDenoiserPass: 1
+        m_motionRejection: 1
+        m_rayTracingMode: 1
+        m_sampleCount: 1
+        m_bounceCount: 1
+      - m_qualityName: Medium
+        m_tracingMode: 2
+        m_textureLODBias: 7
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_probeDimmer: 1
+        m_maxRayLength: 40
+        m_clampValue: 10
+        m_fullResolution: 0
+        m_maxRaySteps: 64
+        m_denoise: 1
+        m_halfResDenoise: 0
+        m_denoiseRadius: 1
+        m_secondDenoiserPass: 1
+        m_motionRejection: 1
+        m_rayTracingMode: 2
+        m_sampleCount: 1
+        m_bounceCount: 2
+      - m_qualityName: High
+        m_tracingMode: 2
+        m_textureLODBias: 6
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_probeDimmer: 1
+        m_maxRayLength: 50
+        m_clampValue: 10
+        m_fullResolution: 1
+        m_maxRaySteps: 128
+        m_denoise: 1
+        m_halfResDenoise: 0
+        m_denoiseRadius: 1
+        m_secondDenoiserPass: 1
+        m_motionRejection: 1
+        m_rayTracingMode: 2
+        m_sampleCount: 2
+        m_bounceCount: 3
+      RTSSRQuality:
+      - m_qualityName: Low
+        m_tracingMode: 4
+        m_textureLODBias: 7
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_ambientDimmer: 1
+        m_minimumSmoothness: 0.25
+        m_smoothnessFadeStart: 0
+        m_maxRayLength: 100
+        m_clampValue: 1.2
+        m_fullResolution: 0
+        m_maxRaySteps: 32
+        m_denoise: 1
+        m_denoiseRadius: 16
+        m_affectsSmoothSurfaces: 0
+        m_rayTracingMode: 1
+        m_sampleCount: 1
+        m_bounceCount: 1
+      - m_qualityName: Medium
+        m_tracingMode: 2
+        m_textureLODBias: 5
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_ambientDimmer: 1
+        m_minimumSmoothness: 0.1
+        m_smoothnessFadeStart: 0
+        m_maxRayLength: 150
+        m_clampValue: 1.2
+        m_fullResolution: 0
+        m_maxRaySteps: 64
+        m_denoise: 1
+        m_denoiseRadius: 16
+        m_affectsSmoothSurfaces: 1
+        m_rayTracingMode: 1
+        m_sampleCount: 1
+        m_bounceCount: 1
+      - m_qualityName: High
+        m_tracingMode: 2
+        m_textureLODBias: 4
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_ambientDimmer: 1
+        m_minimumSmoothness: 0
+        m_smoothnessFadeStart: 0
+        m_maxRayLength: 400
+        m_clampValue: 1.2
+        m_fullResolution: 1
+        m_maxRaySteps: 64
+        m_denoise: 1
+        m_denoiseRadius: 16
+        m_affectsSmoothSurfaces: 1
+        m_rayTracingMode: 1
+        m_sampleCount: 2
+        m_bounceCount: 1
+      RTAOQuality:
+      - m_qualityName: Low
+        m_intenisty: 0.6
+        m_directLightIntensity: 0.1
+        m_maxRayLength: 3
+        m_sampleCount: 8
+        m_fullResolution: 0
+        m_denoise: 1
+        m_denoiseRadius: 0.65
+        m_occluderMotionRejection: 1
+        m_receiverMotionRejection: 1
+      - m_qualityName: Medium
+        m_intenisty: 0.6
+        m_directLightIntensity: 0.1
+        m_maxRayLength: 4
+        m_sampleCount: 16
+        m_fullResolution: 1
+        m_denoise: 1
+        m_denoiseRadius: 0.65
+        m_occluderMotionRejection: 1
+        m_receiverMotionRejection: 1
+      - m_qualityName: High
+        m_intenisty: 0.6
+        m_directLightIntensity: 0.1
+        m_maxRayLength: 5.5
+        m_sampleCount: 32
+        m_fullResolution: 1
+        m_denoise: 1
+        m_denoiseRadius: 0.65
+        m_occluderMotionRejection: 1
+        m_receiverMotionRejection: 1
+      RTRRQuality:
+      - QualityName: Low
+        MaxDepth: 2
+        MaxRayLength: 40
+        MinSmoothness: 0.5
+        AmbientDimmer: 1
+        RayMiss: 3
+        LastBounce: 3
+      - QualityName: Medium
+        MaxDepth: 3
+        MaxRayLength: 90
+        MinSmoothness: 0.5
+        AmbientDimmer: 1
+        RayMiss: 3
+        LastBounce: 3
+      - QualityName: High
+        MaxDepth: 6
+        MaxRayLength: 150
+        MinSmoothness: 0.5
+        AmbientDimmer: 1
+        RayMiss: 3
+        LastBounce: 3
+      RTSSSQuality:
+      - m_qualityName: Low
+        m_isActive: 1
+        m_sampleCount: 2
+      - m_qualityName: Medium
+        m_isActive: 1
+        m_sampleCount: 4
+      - m_qualityName: High
+        m_isActive: 1
+        m_sampleCount: 8
+    AdvancedRTGlobalSettings:
+      OverrideSunMoonLight: 1
+      SunMoonLightQuality:
+        OptionName: 
+        LightingModel: 0
+        CastShadows: 1
+        LightShadowResolutionQuality: 4
+        CustomShadowResolution: 8192
+        RayTracedShadows: 1
+        RayTracedContactShadows: 0
+        RayTracedShadowsSampleCount: 24
+      OverrideAdditionalLights: 1
+      AdditionalLightsQuality:
+        OptionName: 
+        LightingModel: 0
+        CastShadows: 1
+        LightShadowResolutionQuality: 4
+        CustomShadowResolution: 4096
+        RayTracedShadows: 1
+        RayTracedContactShadows: 0
+        RayTracedShadowsSampleCount: 8
+      OverrideGlobalIllumination: 1
+      RTSSGIQuality:
+        m_qualityName: 
+        m_tracingMode: 2
+        m_textureLODBias: 1
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_probeDimmer: 1
+        m_maxRayLength: 60
+        m_clampValue: 5
+        m_fullResolution: 1
+        m_maxRaySteps: 64
+        m_denoise: 1
+        m_halfResDenoise: 0
+        m_denoiseRadius: 1
+        m_secondDenoiserPass: 1
+        m_motionRejection: 1
+        m_rayTracingMode: 2
+        m_sampleCount: 3
+        m_bounceCount: 4
+      OverrideReflections: 1
+      RTSSRQuality:
+        m_qualityName: 
+        m_tracingMode: 2
+        m_textureLODBias: 1
+        m_rayMiss: 3
+        m_lastBounce: 3
+        m_ambientDimmer: 1
+        m_minimumSmoothness: 0
+        m_smoothnessFadeStart: 0
+        m_maxRayLength: 400
+        m_clampValue: 1.2
+        m_fullResolution: 1
+        m_maxRaySteps: 64
+        m_denoise: 1
+        m_denoiseRadius: 16
+        m_affectsSmoothSurfaces: 1
+        m_rayTracingMode: 2
+        m_sampleCount: 8
+        m_bounceCount: 1
+      OverrideAmbientOcclusion: 1
+      RTAOQuality:
+        m_qualityName: 
+        m_intenisty: 0.6
+        m_directLightIntensity: 0.1
+        m_maxRayLength: 5.5
+        m_sampleCount: 64
+        m_fullResolution: 1
+        m_denoise: 1
+        m_denoiseRadius: 0.65
+        m_occluderMotionRejection: 1
+        m_receiverMotionRejection: 1
+      OverrideRecursiveRendering: 0
+      RTRecursiveRenderingQuality:
+        QualityName: 
+        MaxDepth: 5
+        MaxRayLength: 125
+        MinSmoothness: 0.5
+        AmbientDimmer: 1
+        RayMiss: 3
+        LastBounce: 3
+      OverrideSubSurfaceScattering: 1
+      RTSSSQuality:
+        m_qualityName: 
+        m_isActive: 1
+        m_sampleCount: 16
+      AllowPathTracing: 1
+      PathTracingQuality:
+        MaxSamples: 256
+        MinimumDepth: 1
+        MaximumDepth: 4
+        MaximumIntensity: 10
+        SkyImportanceSamplingMode: 0
+        Denoiser: 2
+        UseAOV: 1
+        Temporal: 1
+        m_dayLimitMin: 2
+        m_dayLimitMax: 10
+        m_nightLimitMin: 2
+        m_nightLimitMax: 7

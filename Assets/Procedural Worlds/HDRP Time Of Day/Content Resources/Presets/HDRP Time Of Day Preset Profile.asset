@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7ff1d4f8d93914f833293999135c35, type: 3}
+  m_Name: HDRP Time Of Day Preset Profile
+  m_EditorClassIdentifier: 
+  TimeOfDayPresets:
+  - PresetName: Default Morning
+    PresetImage: {fileID: 2800000, guid: e9035b90545d03c45a2fcaea1d1b69d6, type: 3}
+    RenameEnabled: 0
+    ReplaceImageEnabled: 0
+    TimeOfDay: 8
+    DirectionY: 348
+    CloudPreset: 1
+    GlobalLightIntensityMultiplier: 1
+    GlobalAmbientIntensityMultiplier: 1
+    GlobalNearFogMultiplier: 1
+    GlobalFarFogMultiplier: 1
+    GlobalFogHeightMultiplier: 1
+  - PresetName: Default Mid Day
+    PresetImage: {fileID: 2800000, guid: 61e0334d953c2ab498c4f31b088cebc4, type: 3}
+    RenameEnabled: 0
+    ReplaceImageEnabled: 0
+    TimeOfDay: 13
+    DirectionY: 348
+    CloudPreset: 1
+    GlobalLightIntensityMultiplier: 1
+    GlobalAmbientIntensityMultiplier: 1
+    GlobalNearFogMultiplier: 1
+    GlobalFarFogMultiplier: 1
+    GlobalFogHeightMultiplier: 1
+  - PresetName: Default Evening
+    PresetImage: {fileID: 2800000, guid: 0d63fc8390e2bba46b76d5657f1458c2, type: 3}
+    RenameEnabled: 0
+    ReplaceImageEnabled: 0
+    TimeOfDay: 15.5
+    DirectionY: 348
+    CloudPreset: 1
+    GlobalLightIntensityMultiplier: 1
+    GlobalAmbientIntensityMultiplier: 1
+    GlobalNearFogMultiplier: 1
+    GlobalFarFogMultiplier: 1
+    GlobalFogHeightMultiplier: 1
+  - PresetName: Default Night
+    PresetImage: {fileID: 2800000, guid: 20bf6393c0e518c4eb81fa3ed8abdef4, type: 3}
+    RenameEnabled: 0
+    ReplaceImageEnabled: 0
+    TimeOfDay: 21.72
+    DirectionY: 348
+    CloudPreset: 1
+    GlobalLightIntensityMultiplier: 1
+    GlobalAmbientIntensityMultiplier: 1
+    GlobalNearFogMultiplier: 1
+    GlobalFarFogMultiplier: 1
+    GlobalFogHeightMultiplier: 1

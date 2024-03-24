@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ddbec218155a34497bfa3b5d4f9f02, type: 3}
+  m_Name: Defaults Profile
+  m_EditorClassIdentifier: 
+  m_hdrpTimeOfDayShaderVarients: {fileID: 20000000, guid: ca3aa7134d1a0ee4687c29e40f937afa, type: 2}
+  m_timeOfDayProfile: {fileID: 11400000, guid: 8d29a6fe5c3cab4439a4543407682c8e, type: 2}
+  m_postProcessingProfile: {fileID: 11400000, guid: 5ecc585accaa7074ba3906893e77d72f, type: 2}
+  m_ambientAudioProfile: {fileID: 11400000, guid: 2b2370ba49703894e82f5e099cbe02ae, type: 2}
+  m_reflectionProbeProfile: {fileID: 11400000, guid: 5118cfe8aaff54c4cbd03cdc5d477732, type: 2}
+  m_seasonProfile: {fileID: 11400000, guid: 094a1c91fc5502b44b6130e73c03a270, type: 2}
+  m_presetProfile: {fileID: 11400000, guid: cf73b337baa755249b570f9d8a2cb5d6, type: 2}
+  m_volumetricCloudPreset: {fileID: 11400000, guid: af2321bc47fc30041940a16d82805215, type: 2}
+  m_proceduralCloudPreset: {fileID: 11400000, guid: e9eacb7b16284144a800797c8359df33, type: 2}
+  m_weatherProfiles:
+  - {fileID: 11400000, guid: eeb00e417eaa7da44830447199daae7f, type: 2}
+  - {fileID: 11400000, guid: 624dd54fc5709644095899ad273d7d69, type: 2}
+  - {fileID: 11400000, guid: 528539ab55c96f342b47bcda3e618b5d, type: 2}
+  m_startingTimeOfDay: 10
+  m_startingDirection: 20
+  m_startingHorizonOffset: 0.045
+  m_minMaxWeatherWaitTime: {x: 180, y: 420}
+  m_useReflectionProbeSystem: 1
+  m_autoUpdate: 0
+  m_incrementalUpdate: 1
+  m_incrementalFrameCount: 3
+  m_useOverrideVolumes: 0
+  m_enableInteriorControllers: 1
+  m_enableAudioReverb: 1
+  m_overrideUnderwater: 0
+  m_overrideUnderwaterType: 1

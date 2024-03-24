@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b765c828e881149a59756fa15c7f2e, type: 3}
+  m_Name: HDRP Time Of Day Cave Entrence Reflection Probe Profile (24 Hour)
+  m_EditorClassIdentifier: 
+  m_probeTODData:
+  - m_name: 0-1 am
+    m_probeCubeMap: {fileID: 8900000, guid: 331e5b00c15a77f41a35fe387f590877, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 823
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 0, y: 1}
+    m_showSettings: 0
+  - m_name: 1-2 am
+    m_probeCubeMap: {fileID: 8900000, guid: 4e89c64287d932c47bdaf82a30288053, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 823
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 1, y: 2}
+    m_showSettings: 0
+  - m_name: 2-3 am
+    m_probeCubeMap: {fileID: 8900000, guid: c7f3b6d82def56043b2283caabb39f24, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 2, y: 3}
+    m_showSettings: 0
+  - m_name: 3-4 am
+    m_probeCubeMap: {fileID: 8900000, guid: 5cf59936e0fab4942b4cdb3f670de66b, type: 3}
+    m_intensity: 0.2
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 823
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 3, y: 4}
+    m_showSettings: 0
+  - m_name: 4-5 am
+    m_probeCubeMap: {fileID: 8900000, guid: 7edda7ed83814a84cbccfb357f234a21, type: 3}
+    m_intensity: 0.25
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 4, y: 5}
+    m_showSettings: 0
+  - m_name: 5-6 am
+    m_probeCubeMap: {fileID: 8900000, guid: 910a39fd6c0becb449e29b8ad97792d1, type: 3}
+    m_intensity: 5
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 5, y: 6}
+    m_showSettings: 0
+  - m_name: 6-7 am
+    m_probeCubeMap: {fileID: 8900000, guid: f8163a9dcd1cb624f862e42b32b4f88b, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 6, y: 7}
+    m_showSettings: 0
+  - m_name: 7-8 am
+    m_probeCubeMap: {fileID: 8900000, guid: b9b3ba9bf71b5b74199c95e5a7020d86, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 7, y: 8}
+    m_showSettings: 0
+  - m_name: 8-9 am
+    m_probeCubeMap: {fileID: 8900000, guid: 3def1b3336abbb741b476084e45a5093, type: 3}
+    m_intensity: 0.075
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 8, y: 9}
+    m_showSettings: 0
+  - m_name: 9-10 am
+    m_probeCubeMap: {fileID: 8900000, guid: c026d53c85ec08e478e09feceae739e1, type: 3}
+    m_intensity: 0.09
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 9, y: 10}
+    m_showSettings: 0
+  - m_name: 10-11 am
+    m_probeCubeMap: {fileID: 8900000, guid: d9fd0bfe83909324cb239370593c7de0, type: 3}
+    m_intensity: 0.1
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 823
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 10, y: 11}
+    m_showSettings: 0
+  - m_name: 11-12 am
+    m_probeCubeMap: {fileID: 8900000, guid: ba0a0cfeb3b846544aa1cce6cf500210, type: 3}
+    m_intensity: 0.115
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 823
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 11, y: 12}
+    m_showSettings: 0
+  - m_name: 12-1 pm
+    m_probeCubeMap: {fileID: 8900000, guid: ba0a0cfeb3b846544aa1cce6cf500210, type: 3}
+    m_intensity: 0.115
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 12, y: 13}
+    m_showSettings: 0
+  - m_name: 1-2 pm
+    m_probeCubeMap: {fileID: 8900000, guid: e6da3eb46d2952c41829fcc27281c403, type: 3}
+    m_intensity: 0.12
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 13, y: 14}
+    m_showSettings: 0
+  - m_name: 2-3 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 0026058b1179f3341aa5f31f8556b642, type: 3}
+    m_intensity: 0.12
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 14, y: 15}
+    m_showSettings: 0
+  - m_name: 3-4 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 0f097864f80d5934987daec7d1175078, type: 3}
+    m_intensity: 0.1
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 15, y: 16}
+    m_showSettings: 0
+  - m_name: 4-5 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 19b04afb5d19ab642b2511556e12c8e1, type: 3}
+    m_intensity: 0.1
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 16, y: 17}
+    m_showSettings: 0
+  - m_name: 5-6 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 5132b5652dba80647bc9bbe74183cabe, type: 3}
+    m_intensity: 0.3
+    m_weatherIntensityMultiplier: 0.25
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 17, y: 18}
+    m_showSettings: 0
+  - m_name: 6-7 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 23670ebbf6d7a3240969769aed467d7e, type: 3}
+    m_intensity: 1
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 18, y: 19}
+    m_showSettings: 1
+  - m_name: 7-8 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 8df16d2a4ad18c8439d52ecc69e97455, type: 3}
+    m_intensity: 0.3
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 19, y: 20}
+    m_showSettings: 0
+  - m_name: 8-9 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 493a04c39f8d0f54f8ee6187a1750ac9, type: 3}
+    m_intensity: 0.2
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 20, y: 21}
+    m_showSettings: 0
+  - m_name: 9-10 pm
+    m_probeCubeMap: {fileID: 8900000, guid: dbd1ca79e6a0be44a8850d98f7d26974, type: 3}
+    m_intensity: 0.175
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 21, y: 22}
+    m_showSettings: 0
+  - m_name: 10-11 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 6b65c9edac7aa6c4680ea42881a66ff7, type: 3}
+    m_intensity: 0.1
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 22, y: 23}
+    m_showSettings: 0
+  - m_name: 11-12 pm
+    m_probeCubeMap: {fileID: 8900000, guid: 641152f4c7d16484291b8770ba212db6, type: 3}
+    m_intensity: 0.15
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 3895
+    m_isNightProbe: 1
+    m_timeOfDayAcceptance: {x: 23, y: 24}
+    m_showSettings: 0
+  m_probeTimeMode: 1
+  m_renderMode: 1
+  m_followPlayer: 1
+  m_renderDistance: 5000
+  m_globalMultiplier: 1

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b765c828e881149a59756fa15c7f2e, type: 3}
+  m_Name: HDRP Time Of Day Reflection Probe Profile (One Probe Night)
+  m_EditorClassIdentifier: 
+  m_probeTODData:
+  - m_name: Early Morning
+    m_probeCubeMap: {fileID: 8900000, guid: df811e3dbb430ef4988d18219a5b46bc, type: 3}
+    m_intensity: 1.5
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 6, y: 7}
+    m_showSettings: 0
+  - m_name: Morning
+    m_probeCubeMap: {fileID: 8900000, guid: cca6f2ed660bed44f8abbbd2f061d9e2, type: 3}
+    m_intensity: 0.4
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 7, y: 10.5}
+    m_showSettings: 0
+  - m_name: Afternoon
+    m_probeCubeMap: {fileID: 8900000, guid: 2be19ce5b2ecdac4794c2e770ddfac10, type: 3}
+    m_intensity: 0.75
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 10.5, y: 16}
+    m_showSettings: 0
+  - m_name: Evening
+    m_probeCubeMap: {fileID: 8900000, guid: 494f5954206e5ae46b05be1c9cbfab7b, type: 3}
+    m_intensity: 0.55
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 16, y: 17}
+    m_showSettings: 0
+  - m_name: Late Evening
+    m_probeCubeMap: {fileID: 8900000, guid: 45e372ec38dd890478d753cf28975ab5, type: 3}
+    m_intensity: 3
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 0
+    m_timeOfDayAcceptance: {x: 17, y: 18}
+    m_showSettings: 1
+  - m_name: Night
+    m_probeCubeMap: {fileID: 8900000, guid: 591f1e3c5d87c234cbd0bf0560d548ba, type: 3}
+    m_intensity: 3
+    m_weatherIntensityMultiplier: 0.5
+    m_renderLayers:
+      serializedVersion: 2
+      m_Bits: 16183
+    m_isNightProbe: 1
+    m_timeOfDayAcceptance: {x: 18.05, y: 5.9}
+    m_showSettings: 0
+  m_probeTimeMode: 0
+  m_renderMode: 1
+  m_followPlayer: 1
+  m_renderDistance: 5000

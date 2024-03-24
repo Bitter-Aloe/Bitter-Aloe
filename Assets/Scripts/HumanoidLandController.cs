@@ -19,6 +19,9 @@ public class HumanoidLandController : MonoBehaviour
         playerCollider = GetComponent<PlayerCollider>();
     }
 
+    private Vector3 currentMov;
+    private float currentSpeed;
+
     private void Update()
     {
         // Get input from the arrow keys or other input methods.
@@ -26,16 +29,15 @@ public class HumanoidLandController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // Calculate the movement direction.
-        Vector3 movement = new Vector3(horizontalInput, 0.0f, verticalInput);
+        currentMov = new Vector3(horizontalInput, 0.0f, verticalInput);
 
         // Normalize the direction to maintain a consistent speed when moving diagonally.
-        movement.Normalize();
+        currentMov.Normalize();
 
         // Move the player by adding the movement vector to its position.
-        float speed = _speed;
+        currentSpeed = _speed;
         if (Input.GetKey(KeyCode.LeftShift))
-            speed = speed * sprintFactor;
-        transform.Translate(movement * speed * Time.deltaTime);
+            currentSpeed = currentSpeed * sprintFactor;
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
             Cursor.lockState = CursorLockMode.None;
@@ -48,11 +50,15 @@ public class HumanoidLandController : MonoBehaviour
 
     private void FixedUpdate()
     {
-            if (shouldJump)
-            {
-                GetComponent<Rigidbody>().velocity += new Vector3(0, jumpHeight, 0);
-                shouldJump = false;
-            }
+        Vector3 vel = GetComponent<Rigidbody>().velocity;
+        Vector3 mov = currentMov * currentSpeed;
+        Vector3 newVel = mov.x * transform.right + vel.y * transform.up + mov.z * transform.forward;
+        GetComponent<Rigidbody>().velocity = newVel;
+        if (shouldJump)
+        {
+            GetComponent<Rigidbody>().velocity += new Vector3(0, jumpHeight, 0);
+            shouldJump = false;
+        }
     }
 
 

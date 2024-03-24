@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4492582620198942135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4492582620198942121}
+  - component: {fileID: 1593703351}
+  m_Layer: 0
+  m_Name: Weather Settings Debugger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4492582620198942121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492582620198942135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.57708, y: -6.89627, z: 0.7421603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1593703351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492582620198942135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4b580f968db44ea5fdbd5cfe8d633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_shaderData:
+    m_isUsingGTS: 0
+    m_rainShaderData:
+      m_applyShaderSettings: 1
+      m_rainPower: 0
+      m_rainPowerOnTerrain: 1
+      m_rainMinHeight: 0
+      m_rainMaxHeight: 3000
+      m_rainSpeed: 1
+      m_rainDarkness: 0.19999999
+      m_rainSmoothness: 0.95
+      m_rainScale: 2
+      m_rainTexture: {fileID: 2800000, guid: 807a826f909ed8d4884f24c376b79cad, type: 3}
+    m_snowShaderData:
+      m_applyShaderSettings: 1
+      m_snowPower: 0
+      m_snowPowerOnTerrain: 0
+      m_snowMinHeight: 0
+      m_snowAge: 0
+      m_snowContrast: 2
+      m_snowWorldScale: 5
+      m_snowAlbedo: {fileID: 2800000, guid: 071b8566da6e6994086540b6f52a302c, type: 3}
+      m_snowNormal: {fileID: 2800000, guid: 32f18515e28ea4a4da349f8c9350f3c1, type: 3}
+      m_snowMask: {fileID: 2800000, guid: 44cf318d32cc47a42aa9f3620c7efb12, type: 3}
+      m_snowColor: {r: 1, g: 1, b: 1, a: 1}
+    m_sandShaderData:
+      m_applyShaderSettings: 1
+      m_sandPower: 0
+      m_sandPowerOnTerrain: 0
+      m_sandContrast: 2
+      m_sandWorldScale: 5
+      m_sandMaxHeight: 0
+      m_sandAlbedo: {fileID: 2800000, guid: e097a4da246eca2469fe27e9ce483e2a, type: 3}
+      m_sandNormal: {fileID: 2800000, guid: 306ae6a11c8a51746a0d52dfedd3fa6b, type: 3}
+      m_sandMask: {fileID: 2800000, guid: 3e10f6f451213db4fac07cb14480b373, type: 3}
+    m_miscShaderData:
+      m_applyShaderSettings: 1
+      m_seaLevel: 0
+      m_temperature: 0
+      m_humidity: 0
+      m_weatherMask: {fileID: 0}

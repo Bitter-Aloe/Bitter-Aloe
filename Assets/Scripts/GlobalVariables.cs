@@ -10,6 +10,8 @@ public class GlobalVariables : MonoBehaviour
     void Awake()
     {
         testimonyEntries = GetComponent<CSVParser>()?.dataList;
+        /*QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;*/
     }
 
     public static List<DataEntry> GetTestimonyData()

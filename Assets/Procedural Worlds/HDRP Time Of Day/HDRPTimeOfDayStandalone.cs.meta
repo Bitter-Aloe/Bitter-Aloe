@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3c813430549360040b3fd8b5a6e70748
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 226149
+  packageName: HDRP Time Of Day - Lighting, Weather & Clouds
+  packageVersion: 1.2.0
+  assetPath: Assets/Procedural Worlds/HDRP Time Of Day/HDRPTimeOfDayStandalone.cs
+  uploadId: 559639

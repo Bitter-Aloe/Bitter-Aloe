@@ -14,7 +14,7 @@ public class Pausing : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.F)){
             if(gameIsPaused)
                 Resume();
             else
@@ -29,7 +29,7 @@ public class Pausing : MonoBehaviour
         gameIsPaused = false;
     }
 
-    void Pause(){
+    public void Pause(){
         pauseMenuUI.SetActive(true);
         crossHair.SetActive(false);
         Time.timeScale = 0f;

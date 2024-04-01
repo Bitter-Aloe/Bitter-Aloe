@@ -21,11 +21,19 @@ public class MouseCamLook : MonoBehaviour
     private Vector2 smoothV;
 
 
-
+    private bool paused = false;
     // Update is called once per frame
     void Update()
     {
-        if(Pausing.gameIsPaused) return;
+        if(Pausing.gameIsPaused) {
+            if(!paused) paused = true; 
+            Cursor.lockState = CursorLockMode.None;
+            return;
+        }
+            if(paused){
+                paused = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
 
         if (Cursor.lockState == CursorLockMode.Locked)
         {

@@ -32,5 +32,18 @@ Open the project in Unity Hub with the correct version, and the project will loa
  - [GitHub Desktop](https://desktop.github.com/)
  - [Blender](https://www.blender.org/download/) for 3D modeling.
 
+### CS499 Contributors
+#### Spring 2024
+ - Matthew Whalen ([mrwhalen22](https://github.com/mrwhalen22)) 
+ - Anna Thompson
+ - Ethan Tate 
+ - Cameron Egbert
+ - Todd Jackson
+#### Fall 2023
+ - Reece Allen
+ - Pranneth Bhatt
+ - Destyn Carlton
+ - Jed Antonio
+ - Luke Olsen
 
 

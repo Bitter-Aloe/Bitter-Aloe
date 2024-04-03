@@ -35,8 +35,8 @@ Open the project in Unity Hub with the correct version, and the project will loa
 ### CS499 Contributors
 #### Spring 2024
  - Matthew Whalen ([mrwhalen22](https://github.com/mrwhalen22)) 
- - Anna Thompson
- - Ethan Tate 
+ - Anna Thompson ([anna0021](https://github.com/anna0021))
+ - Ethan Tate ([eptate01](https://github.com/eptate01))
  - Cameron Egbert
  - Todd Jackson
 #### Fall 2023
@@ -45,5 +45,16 @@ Open the project in Unity Hub with the correct version, and the project will loa
  - Destyn Carlton
  - Jed Antonio
  - Luke Olsen
+#### Spring 2022
+ - Brent Bartley
+ - Paul Couch
+ - Laurence Miller
+#### Fall 2022
+ - Brennen Green
+ - Jainam Dhruva
+ - Austin Burnett
+ - Jared Statter 
 
-
+### Bitter Aloe Team
+ - Dr. Steve Davis
+ - William Mattingly ([wjbmattingly](https://github.com/wjbmattingly))

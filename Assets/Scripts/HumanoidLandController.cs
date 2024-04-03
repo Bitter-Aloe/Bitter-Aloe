@@ -8,7 +8,8 @@ public class HumanoidLandController : MonoBehaviour
     [SerializeField] private float _speed = 5;
     [SerializeField] public float sprintFactor = 2f;
     [SerializeField] public float jumpHeight = 5.0f;
-    // Start is called before the first frame update
+
+    public AudioSource walkSound, sprintSound;
 
     private PlayerCollider playerCollider;
     private bool shouldJump = false;
@@ -36,7 +37,8 @@ public class HumanoidLandController : MonoBehaviour
 
         // Move the player by adding the movement vector to its position.
         currentSpeed = _speed;
-        if (Input.GetKey(KeyCode.LeftShift))
+        bool sprinting = Input.GetKey(KeyCode.LeftShift);
+        if (sprinting)
             currentSpeed = currentSpeed * sprintFactor;
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -44,8 +46,33 @@ public class HumanoidLandController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftAlt))
             Cursor.lockState = CursorLockMode.Locked;
 
-        if (Input.GetKeyDown(KeyCode.Space) && playerCollider.IsOnGround)
+        bool onGround = playerCollider.IsOnGround;
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
             shouldJump = true;
+        }
+            
+
+        if(currentMov.magnitude > 0.0f && onGround)
+        {
+            Debug.Log(currentMov);
+            if (sprinting)
+            {
+                walkSound.Pause();
+                sprintSound.UnPause();
+            }
+            else
+            {
+                walkSound.UnPause();
+                sprintSound.Pause();
+            }
+        }
+        else
+        {
+            walkSound.Pause();
+            sprintSound.Pause();
+        }
+
     } 
 
     private void FixedUpdate()

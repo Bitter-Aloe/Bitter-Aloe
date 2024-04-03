@@ -9,20 +9,24 @@ public class PlayerCollider : MonoBehaviour
     {
         get
         {
-            if (m_IsOnGround)
-            {
-                m_IsOnGround = false;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return m_IsOnGround;
         }
     }
 
-    void OnCollisionEnter()
+    private void FixedUpdate()
     {
-        m_IsOnGround = true;
+        Rigidbody body;
+        if ((body = GetComponent<Rigidbody>()) != null)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, transform.localScale.y + 0.05f))
+            {
+                m_IsOnGround = true;
+            }
+            else
+            {
+                m_IsOnGround = false;
+            }
+        }
     }
 }

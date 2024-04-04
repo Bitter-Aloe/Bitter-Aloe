@@ -23,7 +23,7 @@ public class SetOnGround : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 1000.0f))
                 {
-                    transform.position = hit.point;
+                    transform.position = new Vector3(hit.point.x, hit.point.y+0.1f, hit.point.z);
                     justSpawned = false;
                 }
                 else 

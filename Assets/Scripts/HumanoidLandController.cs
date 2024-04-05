@@ -55,7 +55,7 @@ public class HumanoidLandController : MonoBehaviour
 
         if(currentMov.magnitude > 0.0f && onGround)
         {
-            Debug.Log(currentMov);
+            //Debug.Log(currentMov);
             if (sprinting)
             {
                 walkSound.Pause();

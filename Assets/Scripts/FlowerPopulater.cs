@@ -86,9 +86,18 @@ public class FlowerPopulater : MonoBehaviour
             Vector3 pos = new Vector3(entry.x.Remap(min.x, max.x, -spawnScale, spawnScale), 0, entry.y.Remap(min.y, max.y, -spawnScale, spawnScale));
             flowers[i] = (GameObject)Instantiate(flowerPrefab, pos, Quaternion.AngleAxis(Random.value * 360, Vector3.up));
             flowers[i].GetComponent<PopupManager>().dataIndex = i;
+           
+            Color eColor = Color.HSVToRGB((float)(GlobalVariables.GetTestimonyEntry(i).topic) / 266.0f, 0.60f, 0.30f);
+            float H, S, V;
+            Color.RGBToHSV(eColor, out H, out S, out V);
+            Debug.Log(eColor);
+
+            flowers[i].GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissiveColor", eColor * 9.0f);
+            flowers[i].GetComponentInChildren<MeshRenderer>().material.EnableKeyword("_EmissiveIntensity");
 
         }
         Debug.Log("Finished Spawning Plants at t=" + Time.realtimeSinceStartupAsDouble);
+
     }
 
     private void FixedUpdate()

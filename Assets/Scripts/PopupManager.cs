@@ -31,12 +31,13 @@ public class PopupManager : MonoBehaviour, IPointerClickHandler
             ClosePopup();
         else
         {
-            string message = GetCSVData();
+            string[] message = new string[4];
+            message = GetCSVData();
             DisplayPopup(message);
         }
     }
 
-    private void DisplayPopup(string message)
+    private void DisplayPopup(string[] message)
     {
         if (popupPrefab)
         {
@@ -44,8 +45,11 @@ public class PopupManager : MonoBehaviour, IPointerClickHandler
             popupPanel.SetActive(true);*/
             isPopupOpen = true;
             popupInstance = Instantiate(popupPrefab, new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), Quaternion.identity);
-            TextMeshPro textMesh = popupInstance.GetComponentInChildren<TextMeshPro>();
-            textMesh.text = message;
+            TextMeshPro[] textMesh = popupInstance.GetComponentsInChildren<TextMeshPro>();
+            textMesh[0].text = message[0];
+            textMesh[1].text = message[1];
+            textMesh[2].text = message[2];
+            textMesh[3].text = message[3];
         }
     }
 
@@ -59,9 +63,17 @@ public class PopupManager : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private string GetCSVData()
+    private string[] GetCSVData()
     {
         var firstEntry = GlobalVariables.GetTestimonyEntry(dataIndex); // Index should start at 0 to get the first entry
-        return $"Name: {firstEntry.name}\nDescription: {firstEntry.description}\nCoordinates: ({firstEntry.x}, {firstEntry.y})\nTopic: {firstEntry.topic}";
+        string[] messageArray = new string[4];
+        messageArray[0] = $"Name: {firstEntry.name}";
+        messageArray[1] = $"Description: {firstEntry.description}";
+        messageArray[2] = $"Topic: {firstEntry.topic}";
+        messageArray[3] = $"Coordinates: ({firstEntry.x}, {firstEntry.y})";
+
+
+        return messageArray;
     }
 }
+

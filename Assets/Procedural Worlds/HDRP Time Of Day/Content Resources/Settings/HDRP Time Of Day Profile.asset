@@ -3215,7 +3215,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_multiplyColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    m_useUnderwaterReverb: 1
+    m_useUnderwaterReverb: 0
     m_reverbFilterSettings:
       m_dryLevel: -2500
       m_room: -1000

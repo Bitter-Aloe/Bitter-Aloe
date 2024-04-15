@@ -14,9 +14,9 @@ public class PopUpRotator : MonoBehaviour
     void Update()
     {
         Vector3 camPosition = Camera.allCameras[0].transform.position;
-        camPosition.y += .3f;
+        Vector3 dirVec = transform.position - camPosition;
+        Vector3 negCamPosition = transform.position + dirVec;
 
-        transform.LookAt(camPosition);
-        transform.RotateAround(transform.position, Vector3.up, 180);
+        transform.LookAt(negCamPosition);
     }
 }

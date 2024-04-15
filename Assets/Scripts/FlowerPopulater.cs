@@ -22,6 +22,7 @@ public class FlowerPopulater : MonoBehaviour
     public int objectPoolSize = 1000;
     public GameObject flowerPrefab;
     public float spawnScale = 200.0f;
+    public float glowIntensity = 8.0f;
 
     private bool shouldDropPlants = true;
 
@@ -86,14 +87,16 @@ public class FlowerPopulater : MonoBehaviour
             Vector3 pos = new Vector3(entry.x.Remap(min.x, max.x, -spawnScale, spawnScale), 0, entry.y.Remap(min.y, max.y, -spawnScale, spawnScale));
             flowers[i] = (GameObject)Instantiate(flowerPrefab, pos, Quaternion.AngleAxis(Random.value * 360, Vector3.up));
             flowers[i].GetComponent<PopupManager>().dataIndex = i;
-           
-            Color eColor = Color.HSVToRGB((float)(GlobalVariables.GetTestimonyEntry(i).topic) / 266.0f, 0.60f, 0.30f);
-            float H, S, V;
-            Color.RGBToHSV(eColor, out H, out S, out V);
-            Debug.Log(eColor);
 
-            flowers[i].GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissiveColor", eColor * 9.0f);
-            flowers[i].GetComponentInChildren<MeshRenderer>().material.EnableKeyword("_EmissiveIntensity");
+            // FLOWER GLOW OPTION
+            /*float hue = GlobalVariables.GetTestimonyEntry(i).topic;
+            hue = hue.Remap(0, 266, 80, 150);
+            hue = hue / 360.0f;
+            Color eColor = Color.HSVToRGB(hue, 0.2f, 0.7f);
+
+            flowers[i].GetComponentInChildren<MeshRenderer>().material.color = Color.HSVToRGB(hue, 0.2f, 1.0f);
+            flowers[i].GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissiveColor", eColor * glowIntensity);
+            flowers[i].GetComponentInChildren<MeshRenderer>().material.EnableKeyword("_EmissiveIntensity");*/
 
         }
         Debug.Log("Finished Spawning Plants at t=" + Time.realtimeSinceStartupAsDouble);
@@ -136,32 +139,6 @@ public class FlowerPopulater : MonoBehaviour
                 }
             }
             Debug.Log("Finished Dropping and deleting plants at t=" + Time.realtimeSinceStartupAsDouble);
-
-            /*Debug.Log(Time.realtimeSinceStartupAsDouble);
-
-            Debug.Log("Plants to remove count = " + removeIndices.Count);
-            removeIndices.Sort((a, b) => b.CompareTo(a));
-            List<GameObject> temp = new List<GameObject>();
-
-            Debug.Log(Time.realtimeSinceStartupAsDouble);
-
-            int currRemoveIndex = 0;
-            int currRemoveIndexVal = removeIndices[0];
-            for (int i = 0;i < flowers.Length; i++)
-            {
-                if(i != currRemoveIndexVal)
-                {
-                    temp.Add(flowers[i]);
-                }
-                else
-                {
-                    currRemoveIndex++;
-                    currRemoveIndexVal = removeIndices[currRemoveIndex];
-                }
-                
-            }
-            flowers = temp.ToArray();
-            Debug.Log(Time.realtimeSinceStartupAsDouble);*/
             shouldDropPlants = false;
         }
       

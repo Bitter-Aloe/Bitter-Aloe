@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.28345, g: 324.97046, b: 430.1162, a: 1}
+  m_IndirectSpecularColor: {r: 261.8992, g: 324.44934, b: 429.4259, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -588,19 +588,26 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Bitter Aloe Team: Dr. Steve Davis, William Mattingly
 
-    University of
-    Kentucky Student Contributors:
 
-    Spring 2022: Brent Bartley, Paul Couch, Laurence
-    Miller
+    University
+    of Kentucky Student Contributors:
 
-    Fall 2022: Austin Burnett, Jainam Dhruva, Brennen Green, Jared Statter
+    Spring 2022: Brent Bartley, Paul Couch,
+    Laurence Miller
 
-    Spring
-    2023: Reece Allen, Pranneth Bhatt, Destyn Carlton, Jed Antonio, Luke Olsen
+    Fall 2022: Austin Burnett, Jainam Dhruva, Brennen Green,
+    Jared Statter
 
-    Spring
-    2024: Cameron Egbert, Todd Jackson, Ethan Tate, Anna Thompson, Matthew Whalen
+    Spring 2023: Reece Allen, Pranneth Bhatt, Destyn Carlton,
+    Jed Antonio, Luke Olsen
+
+    Spring 2024: Cameron Egbert, Todd Jackson, Ethan
+    Tate, Anna Thompson, Matthew Whalen
+
+
+    Music - ''Either/Or'' by Yung Chomsky.
+
+
 
 
 
@@ -638,7 +645,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -667,7 +674,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -272.92065, y: 0, z: -271.75928, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

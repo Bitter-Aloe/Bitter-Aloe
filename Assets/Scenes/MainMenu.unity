@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 262.28345, g: 324.97046, b: 430.1162, a: 1}
+  m_IndirectSpecularColor: {r: 261.8992, g: 324.44934, b: 429.4259, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1862,9 +1862,17 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1640135666}
+    - target: {fileID: 2543054140578622721, guid: e1f28e6624cf9294b989ba70ffb47889, type: 3}
+      propertyPath: transitionTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2907935825598055841, guid: e1f28e6624cf9294b989ba70ffb47889, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907935825598055841, guid: e1f28e6624cf9294b989ba70ffb47889, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8865207907917018825, guid: e1f28e6624cf9294b989ba70ffb47889, type: 3}
       propertyPath: m_RootOrder

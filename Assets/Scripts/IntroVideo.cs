@@ -13,6 +13,9 @@ public class IntroVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyUp(KeyCode.Escape))
+            LoadNextLevel();
+
         videoTime -= Time.deltaTime;
         if (videoTime<= 0.0f)
         {

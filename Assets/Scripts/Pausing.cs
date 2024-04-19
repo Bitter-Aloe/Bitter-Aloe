@@ -14,7 +14,7 @@ public class Pausing : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.F)){
+        if (Input.GetKeyDown(KeyCode.Escape)){
             if(gameIsPaused)
                 Resume();
             else

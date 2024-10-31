@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HDRP Time Of Day Post FX Profile
   m_EditorClassIdentifier: 
   m_timeOfDayPostFXData:
-    m_postProcessingQuality: 1
+    m_postProcessingQuality: 0
     m_colorGradingSettings: 0
     m_bloomSettings: 0
     m_shadowToningSettings: 0

@@ -2487,7 +2487,7 @@ MonoBehaviour:
     m_ssgiQuality: 0
     m_ssgiRenderMode: 2
     m_useSSR: 1
-    m_ssrQuality: 1
+    m_ssrQuality: 0
     m_useSSS: 1
     m_useContactShadows: 1
     m_contactShadowsDistance:
@@ -3140,7 +3140,7 @@ MonoBehaviour:
       m_sampleCount: 32
       m_occlusionOffset: 0.05
       m_allowOffScreen: 0
-      m_volumetricCloudOcclusion: 1
+      m_volumetricCloudOcclusion: 0
     m_darkerNightSettings:
       m_darkerNights: 0
       m_automaticExposureAdjustmentValue: 1.25

@@ -23,7 +23,7 @@ public class FlowerPopulater : MonoBehaviour
 
     private bool shouldDropPlants = true;
 
-    Vector2 maxInDataSet(List<DataEntry> dataEntries)
+    Vector2 MaxInDataSet(List<DataEntry> dataEntries)
     {
         Vector2 max = new Vector2(float.MinValue, float.MinValue);
         for (int i = 0; i < dataEntries.Count; i++)
@@ -42,7 +42,7 @@ public class FlowerPopulater : MonoBehaviour
         return max;
     }
 
-    Vector2 minInDataSet(List<DataEntry> dataEntries)
+    Vector2 MinInDataSet(List<DataEntry> dataEntries)
     {
         Vector2 min = new Vector2(float.MaxValue, float.MaxValue);
         for (int i = 0; i < dataEntries.Count; i++)
@@ -72,8 +72,8 @@ public class FlowerPopulater : MonoBehaviour
 
     
 
-        Vector2 max = maxInDataSet(dataset);
-        Vector2 min = minInDataSet(dataset);
+        Vector2 max = MaxInDataSet(dataset);
+        Vector2 min = MinInDataSet(dataset);
 
         Debug.Log("Plant Count = " + objectPoolSize);
 
